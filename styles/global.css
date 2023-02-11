@@ -12,16 +12,6 @@ body {
   box-sizing: border-box;
 }
 
-:root {
-  --fg: #000;
-  --bg: #fff;
-}
-
-[data-theme='dark'] {
-  --fg: #fff;
-  --bg: #000;
-}
-
 a {
   color: #999;
   text-decoration: none;
