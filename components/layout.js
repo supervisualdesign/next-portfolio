@@ -1,16 +1,20 @@
+import Side from './side'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Shu Uesugi'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'LOWEN'
+export const siteTitle = 'Portfolio'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
-      <Head>
+<section
+    className={styles.layout} >
+
+    <Side />
+       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -25,6 +29,8 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+    
+    <div className={styles.container}>
       <header className={styles.header}>
         {home ? (
           <>
@@ -65,5 +71,7 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
+    
+</section>
   )
 }
